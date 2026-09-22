@@ -485,7 +485,7 @@
                             <i class="fas fa-list-ul"></i> Ver Ingredientes
                         </button>
                     </div>
-<button id="add-btn-4" onclick="addAmigustoToCart('pizza')" class="w-full mt-5 bg-gradient-to-r from-primary to-red-700 text-white py-3 px-4 rounded-xl font-bold flex items-center justify-center hover:shadow-[0_8px_20px_rgba(230,33,23,0.4)] hover:-translate-y-0.5 transition-all duration-300 group">
+<button id="add-btn-4" onclick="addAmigustoToCart('pizza', this)" class="w-full mt-5 bg-gradient-to-r from-primary to-red-700 text-white py-3 px-4 rounded-xl font-bold flex items-center justify-center hover:shadow-[0_8px_20px_rgba(230,33,23,0.4)] hover:-translate-y-0.5 transition-all duration-300 group">
                         <div class="flex items-center gap-2">
                             <div class="bg-white/20 p-1.5 rounded-lg group-hover:scale-110 transition-transform">
                                 <i class="fas fa-shopping-cart text-sm"></i>
@@ -1661,7 +1661,7 @@
     </div>
 
     <div class="px-4 pb-4 pt-2 mt-auto w-full border-t border-gray-50">
-        <button onclick="addCalzoneToCart('Calzone Tradicional', 31.00)" class="w-full bg-gradient-to-r from-primary to-red-700 text-white py-2 px-4 rounded-lg font-bold flex items-center justify-center hover:shadow-[0_4px_12px_rgba(230,33,23,0.3)] hover:-translate-y-0.5 transition-all duration-300">
+        <button onclick="addCalzoneToCart('Calzone Tradicional', 31.00, this)" class="w-full bg-gradient-to-r from-primary to-red-700 text-white py-2 px-4 rounded-lg font-bold flex items-center justify-center hover:shadow-[0_4px_12px_rgba(230,33,23,0.3)] hover:-translate-y-0.5 transition-all duration-300">
             <i class="fas fa-shopping-cart text-xs mr-2"></i>
             <span class="text-xs sm:text-sm tracking-wide">Agregar</span>
         </button>
@@ -1697,7 +1697,7 @@
             <p id="olive-error-calzone-veg" class="text-red-500 text-[9px] sm:text-[10px] font-bold mt-1 hidden">Debes elegir el tipo de aceituna</p>
         </div>
 
-        <button onclick="addCalzoneVegToCart()" class="w-full bg-gradient-to-r from-primary to-red-700 text-white py-2 px-4 rounded-lg font-bold flex items-center justify-center hover:shadow-[0_4px_12px_rgba(230,33,23,0.3)] hover:-translate-y-0.5 transition-all duration-300">
+        <button onclick="addCalzoneVegToCart(this)" class="w-full bg-gradient-to-r from-primary to-red-700 text-white py-2 px-4 rounded-lg font-bold flex items-center justify-center hover:shadow-[0_4px_12px_rgba(230,33,23,0.3)] hover:-translate-y-0.5 transition-all duration-300">
             <i class="fas fa-shopping-cart text-xs mr-2"></i>
             <span class="text-xs sm:text-sm tracking-wide">Agregar</span>
         </button>
@@ -1724,7 +1724,7 @@
             <i class="fas fa-list-ul text-gray-400 group-hover:text-primary transition-colors text-xs"></i>
             VER INGREDIENTES
         </button>
-        <button onclick="addAmigustoToCart('calzone')" class="w-full bg-gradient-to-r from-primary to-red-700 text-white py-2 px-4 rounded-lg font-bold flex items-center justify-center hover:shadow-[0_4px_12px_rgba(230,33,23,0.3)] hover:-translate-y-0.5 transition-all duration-300 group">
+        <button onclick="addAmigustoToCart('calzone', this)" class="w-full bg-gradient-to-r from-primary to-red-700 text-white py-2 px-4 rounded-lg font-bold flex items-center justify-center hover:shadow-[0_4px_12px_rgba(230,33,23,0.3)] hover:-translate-y-0.5 transition-all duration-300 group">
             <i class="fas fa-shopping-cart text-xs group-hover:scale-110 transition-transform mr-2"></i>
             <span class="text-xs sm:text-sm tracking-wide">Agregar al carrito</span>
         </button>
@@ -2919,7 +2919,7 @@ function addRefresco(name, id, img, btn) {
 
         <!-- Action Area -->
         <div class="p-5 border-t border-gray-100 bg-white">
-            <button onclick="confirmRavioles()" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-primary to-red-700 text-white font-bold hover:shadow-[0_8px_20px_rgba(230,33,23,0.4)] hover:-translate-y-0.5 transition-all duration-300 shadow-sm text-sm tracking-wide flex items-center justify-center gap-2">
+            <button onclick="confirmRavioles(this)" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-primary to-red-700 text-white font-bold hover:shadow-[0_8px_20px_rgba(230,33,23,0.4)] hover:-translate-y-0.5 transition-all duration-300 shadow-sm text-sm tracking-wide flex items-center justify-center gap-2">
                 <i class="fas fa-shopping-cart text-xs"></i>
                 Agregar - S/ 24.00
             </button>
@@ -3006,7 +3006,7 @@ function addRefresco(name, id, img, btn) {
 
         <!-- Action Area -->
         <div class="p-5 border-t border-gray-100 bg-white">
-            <button onclick="confirmFetuccini()" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-primary to-red-700 text-white font-bold hover:shadow-[0_8px_20px_rgba(230,33,23,0.4)] hover:-translate-y-0.5 transition-all duration-300 shadow-sm text-sm tracking-wide flex items-center justify-center gap-2">
+            <button onclick="confirmFetuccini(this)" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-primary to-red-700 text-white py-3.5 px-4 rounded-xl font-bold flex items-center justify-center gap-2 hover:shadow-[0_8px_20px_rgba(230,33,23,0.4)] hover:-translate-y-0.5 transition-all duration-300 shadow-sm text-sm tracking-wide">
                 <i class="fas fa-shopping-cart text-xs"></i>
                 Agregar - S/ 23.00
             </button>
@@ -3092,7 +3092,7 @@ function addRefresco(name, id, img, btn) {
 
         <!-- Action Area -->
         <div class="p-5 border-t border-gray-100 bg-white">
-            <button onclick="confirmEspaguetis()" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-primary to-red-700 text-white font-bold hover:shadow-[0_8px_20px_rgba(230,33,23,0.4)] hover:-translate-y-0.5 transition-all duration-300 shadow-sm text-sm tracking-wide flex items-center justify-center gap-2">
+            <button onclick="confirmEspaguetis(this)" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-primary to-red-700 text-white font-bold hover:shadow-[0_8px_20px_rgba(230,33,23,0.4)] hover:-translate-y-0.5 transition-all duration-300 shadow-sm text-sm tracking-wide flex items-center justify-center gap-2">
                 <i class="fas fa-shopping-cart text-xs"></i>
                 Agregar - S/ 22.00
             </button>
