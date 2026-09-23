@@ -452,8 +452,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // Handle clicks on data-category links
     categoryLinks.forEach(link => {
         link.addEventListener('click', (e) => {
-            // If we are on the menu page and the link points to the menu page hash
             const category = link.getAttribute('data-category');
+            const href = link.getAttribute('href');
+
+            // If the link goes to index.html or category is 'inicio', allow default navigation to index.html
+            if (category === 'inicio' || (href && href.startsWith('index.html'))) {
+                return;
+            }
 
             if (isMenuPage) {
                 e.preventDefault();
