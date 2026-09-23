@@ -681,21 +681,15 @@ const cartApp = {
         this.state.items.forEach(item => {
             const itemTotal = item.price * item.qty;
             total += itemTotal;
-            message += `- ${item.qty}x ${item.name} (S/ ${itemTotal.toFixed(2)})\n`;
+            message += `• ${item.qty}x ${item.name} - S/ ${itemTotal.toFixed(2)}\n`;
             if (item.desc) {
                 message += `  Detalles: ${item.desc}\n`;
             }
         });
 
-        message += `\nTotal a pagar: S/ ${total.toFixed(2)}`;
+        message += `\n*TOTAL GENERAL: S/ ${total.toFixed(2)}*`;
 
-        // Numero de WhatsApp proporcionado, si no hay usar un placeholder.
-        // Asumiendo +51 para Perú (Chiclayo) ya que el HTML menciona (074) 123 456 y "Chiclayo".
-        // El user no especificó el número exacto, pondremos el que está en el footer o uno generico si no hay.
-        // Let's use standard +51 917 142 975 or check footer. Footer has "(074) 123 456". Let's just use "51917142975" as a placeholder that the user can replace later.
-        // Or wait, can I prompt the user for the number? The user asked "puedes colocar un número de wsp". Let's just use "51917142975".
-
-        const phoneNumber = "51917142975";
+        const phoneNumber = "51970923423";
         const encodedMessage = encodeURIComponent(message);
         const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
 
