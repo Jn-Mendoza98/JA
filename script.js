@@ -1050,26 +1050,38 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!query) {
             suggestionsContainer.classList.add('hidden');
             suggestionsContainer.innerHTML = '';
-            // Show all cards
-            pizzaCards.forEach(card => {
-                card.style.display = '';
-                card.classList.remove('hidden');
+            // Restore original order and make sure all cards are visible
+            pizzas.slice().sort((a, b) => a.index - b.index).forEach(p => {
+                p.element.style.display = '';
+                p.element.classList.remove('hidden');
+                pizzaGrid.appendChild(p.element);
             });
             return;
         }
 
         const lowerQuery = query.toLowerCase();
-        const matches = pizzas.filter(p => p.title.toLowerCase().startsWith(lowerQuery));
+        const matchingPizzas = pizzas.filter(p => p.title.toLowerCase().includes(lowerQuery));
+        matchingPizzas.sort((a, b) => {
+            const aStarts = a.title.toLowerCase().startsWith(lowerQuery);
+            const bStarts = b.title.toLowerCase().startsWith(lowerQuery);
+            if (aStarts && !bStarts) return -1;
+            if (!aStarts && bStarts) return 1;
+            return a.index - b.index;
+        });
 
-        // Live filter cards
-        pizzaCards.forEach(card => {
-            const isMatch = matches.some(m => m.element === card);
-            card.style.display = isMatch ? '' : 'none';
+        const nonMatchingPizzas = pizzas.filter(p => !p.title.toLowerCase().includes(lowerQuery));
+        nonMatchingPizzas.sort((a, b) => a.index - b.index);
+
+        // Reorder DOM elements: matches first, followed by non-matches (all remaining visible)
+        [...matchingPizzas, ...nonMatchingPizzas].forEach(p => {
+            p.element.style.display = '';
+            p.element.classList.remove('hidden');
+            pizzaGrid.appendChild(p.element);
         });
 
         // Show suggestions
-        if (matches.length > 0) {
-            suggestionsContainer.innerHTML = matches.map(match => `
+        if (matchingPizzas.length > 0) {
+            suggestionsContainer.innerHTML = matchingPizzas.map(match => `
                 <button class="w-full text-left px-4 py-3 hover:bg-gray-50 border-b border-gray-50 last:border-0 transition-colors flex items-center justify-between group" data-index="${match.index}">
                     <span class="font-medium text-gray-700 group-hover:text-primary transition-colors">${match.title}</span>
                     <i class="fas fa-chevron-right text-gray-300 group-hover:text-primary text-xs transition-colors"></i>
@@ -1108,13 +1120,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const match = pizzas.find(p => p.index == index);
             if (match) {
                 searchInput.value = match.title;
+                renderSuggestions(match.title);
                 suggestionsContainer.classList.add('hidden');
                 suggestionsContainer.classList.remove('flex');
-
-                // Show only this card
-                pizzaCards.forEach(card => {
-                    card.style.display = card === match.element ? '' : 'none';
-                });
 
                 // Scroll to it
                 const y = match.element.getBoundingClientRect().top + window.scrollY - 100;
@@ -1131,7 +1139,7 @@ document.addEventListener('DOMContentLoaded', () => {
         suggestionsContainer.classList.remove('flex');
         if (query) {
              const lowerQuery = query.toLowerCase();
-             const firstMatch = pizzas.find(p => p.title.toLowerCase().startsWith(lowerQuery));
+             const firstMatch = pizzas.find(p => p.title.toLowerCase().includes(lowerQuery));
              if (firstMatch) {
                  const y = firstMatch.element.getBoundingClientRect().top + window.scrollY - 100;
                  window.scrollTo({ top: y, behavior: 'smooth' });
