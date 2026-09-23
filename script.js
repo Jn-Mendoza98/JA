@@ -417,10 +417,15 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!isMenuPage || !menuSections.length) return;
 
         let found = false;
+        let targetSection = null;
+
         menuSections.forEach(section => {
             if (section.dataset.category === category || category === 'all') {
                 section.classList.remove('hidden');
                 found = true;
+                if (section.dataset.category === category) {
+                    targetSection = section;
+                }
             } else {
                 section.classList.add('hidden');
             }
@@ -431,6 +436,16 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!found && category !== 'all') {
             // Un-hide everything just in case
             menuSections.forEach(sec => sec.classList.remove('hidden'));
+        }
+
+        // Scroll to top of the active section considering the sticky header height
+        if (targetSection) {
+            const header = document.querySelector('header');
+            const headerHeight = header ? header.offsetHeight : 80;
+            const y = targetSection.getBoundingClientRect().top + window.scrollY - headerHeight;
+            window.scrollTo({ top: y, behavior: 'smooth' });
+        } else {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     }
 
