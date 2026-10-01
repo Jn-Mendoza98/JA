@@ -12,29 +12,29 @@ const amigustoApp = {
     },
 
     ingredients: [
-        { id: 'am-aceitunas-n', name: 'Aceitunas Negras', img: 'https://images.unsplash.com/photo-1559561853-08451507cbe7?auto=format&fit=crop&w=200&q=80' },
-        { id: 'am-aceitunas-v', name: 'Aceitunas Verdes', img: 'https://images.unsplash.com/photo-1603569283847-aa295f0d016a?auto=format&fit=crop&w=200&q=80' },
-        { id: 'am-aji', name: 'Ají', img: 'https://images.unsplash.com/photo-1582285194593-fb3dceacbb84?auto=format&fit=crop&w=200&q=80' },
-        { id: 'am-albahaca', name: 'Albahaca', img: 'https://images.unsplash.com/photo-1615486171439-d3e75344439c?auto=format&fit=crop&w=200&q=80' },
-        { id: 'am-cabanossi', name: 'Cabanossi', img: 'https://images.unsplash.com/photo-1627308595186-e3d81b312781?auto=format&fit=crop&w=200&q=80' },
-        { id: 'am-cebolla', name: 'Cebolla', img: 'https://images.unsplash.com/photo-1618512496248-a07fe83aa8cb?auto=format&fit=crop&w=200&q=80' },
-        { id: 'am-cecina', name: 'Cecina', img: 'https://images.unsplash.com/photo-1606487140880-60bce29b6dc6?auto=format&fit=crop&w=200&q=80' },
-        { id: 'am-champinones', name: 'Champiñones', img: 'https://images.unsplash.com/photo-1603417757913-92b0253fce98?auto=format&fit=crop&w=200&q=80' },
-        { id: 'am-chorizo', name: 'Chorizo', img: 'https://images.unsplash.com/photo-1542838965-0a149c71fb2a?auto=format&fit=crop&w=200&q=80' },
-        { id: 'am-durazno', name: 'Durazno', img: 'https://images.unsplash.com/photo-1528821128474-27f963b062bf?auto=format&fit=crop&w=200&q=80' },
-        { id: 'am-esparrago', name: 'Espárrago', img: 'https://images.unsplash.com/photo-1518733355593-3d0d6255776f?auto=format&fit=crop&w=200&q=80' },
-        { id: 'am-hotdog', name: 'Hot Dog', img: 'https://images.unsplash.com/photo-1619740455993-9e612b1af08a?auto=format&fit=crop&w=200&q=80' },
-        { id: 'am-jamon', name: 'Jamón', img: 'https://images.unsplash.com/photo-1628151015968-3a4429e9ef04?auto=format&fit=crop&w=200&q=80' },
-        { id: 'am-papaya', name: 'Papaya', img: 'https://images.unsplash.com/photo-1517282009859-f000ef1b4395?auto=format&fit=crop&w=200&q=80' },
-        { id: 'am-pepperoni', name: 'Pepperoni', img: 'https://images.unsplash.com/photo-1628840042765-356cda07504e?auto=format&fit=crop&w=200&q=80' },
-        { id: 'am-pimiento', name: 'Pimiento', img: 'https://images.unsplash.com/photo-1563565375-f3fdfdbefa83?auto=format&fit=crop&w=200&q=80' },
-        { id: 'am-pina', name: 'Piña', img: 'https://images.unsplash.com/photo-1550258987-190a2d41a8ba?auto=format&fit=crop&w=200&q=80' },
-        { id: 'am-platano', name: 'Plátano', img: 'https://images.unsplash.com/photo-1528825871115-3581a5387919?auto=format&fit=crop&w=200&q=80' },
-        { id: 'am-pollo', name: 'Pollo', img: 'https://images.unsplash.com/photo-1604503468506-a8da13d82791?auto=format&fit=crop&w=200&q=80' },
-        { id: 'am-salame', name: 'Salame', img: 'https://images.unsplash.com/photo-1534065261546-d2efb4be3eb8?auto=format&fit=crop&w=200&q=80' },
-        { id: 'am-salchicha', name: 'Salchicha', img: 'https://images.unsplash.com/photo-1585325701165-351af916e581?auto=format&fit=crop&w=200&q=80' },
-        { id: 'am-tocino', name: 'Tocino', img: 'https://images.unsplash.com/photo-1528607929212-2636ec44253e?auto=format&fit=crop&w=200&q=80' },
-        { id: 'am-tomate', name: 'Tomate en rodajas', img: 'https://images.unsplash.com/photo-1592924357228-91a4daadcfea?auto=format&fit=crop&w=200&q=80' }
+        { id: 'am-aceitunas-n', name: 'Aceitunas Negras', img: 'IM/ING/ACEITUNA NEGRA.png' },
+        { id: 'am-aceitunas-v', name: 'Aceitunas Verdes', img: 'IM/ING/ACEITUNA VERDE.png' },
+        { id: 'am-aji', name: 'Ají', img: 'IM/ING/AJI.png' },
+        { id: 'am-albahaca', name: 'Albahaca', img: 'IM/ING/ALBAHACA.png' },
+        { id: 'am-cabanossi', name: 'Cabanossi', img: 'IM/ING/CABANOSSI.png' },
+        { id: 'am-cebolla', name: 'Cebolla', img: 'IM/ING/CEBOLLA.png' },
+        { id: 'am-cecina', name: 'Cecina', img: 'IM/ING/CECINA.png' },
+        { id: 'am-champinones', name: 'Champiñones', img: 'IM/ING/CHAMPIGÑONES.png' },
+        { id: 'am-chorizo', name: 'Chorizo', img: 'IM/ING/CHORIZO.png' },
+        { id: 'am-durazno', name: 'Durazno', img: 'IM/ING/DURAZNO.png' },
+        { id: 'am-esparrago', name: 'Espárrago', img: 'IM/ING/ESPARRAGO.png' },
+        { id: 'am-hotdog', name: 'Hot Dog', img: 'IM/ING/HOT DOG.png' },
+        { id: 'am-jamon', name: 'Jamón', img: 'IM/ING/JAMON.png' },
+        { id: 'am-papaya', name: 'Papaya', img: 'IM/ING/PAPAYA.png' },
+        { id: 'am-pepperoni', name: 'Pepperoni', img: 'IM/ING/PEPPERONI.png' },
+        { id: 'am-pimiento', name: 'Pimiento', img: 'IM/ING/PIMIENTO.png' },
+        { id: 'am-pina', name: 'Piña', img: 'IM/ING/PIÑA.png' },
+        { id: 'am-platano', name: 'Plátano', img: 'IM/ING/PLATANO.png' },
+        { id: 'am-pollo', name: 'Pollo', img: 'IM/ING/POLLO.png' },
+        { id: 'am-salame', name: 'Salame', img: 'IM/ING/SALAME.png' },
+        { id: 'am-salchicha', name: 'Salchicha', img: 'IM/ING/SALCHICHA.png' },
+        { id: 'am-tocino', name: 'Tocino', img: 'IM/ING/TOCINO.png' },
+        { id: 'am-tomate', name: 'Tomate en rodajas', img: 'IM/ING/TOMATE.png' }
     ],
 
     init() {
@@ -844,9 +844,9 @@ const bebidasApp = {
     },
 
     images: {
-        'Inca Kola': 'https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=400&q=80',
-        'Coca-Cola': 'https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=400&q=80',
-        'Fanta': 'https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=400&q=80'
+        'Inca Kola': 'IM/BEBIDAS/INKA.png',
+        'Coca-Cola': 'IM/BEBIDAS/COCA.png',
+        'Fanta': 'IM/BEBIDAS/FANTA.png'
     },
 
     init() {
@@ -1193,7 +1193,7 @@ function confirmRavioles(btn) {
     const sauceName = selectedSauce.value;
     const name = `Ravioles (Salsa ${sauceName})`;
     const price = 24.00;
-    const img = 'IM/pasta.png'; // Assuming pasta.png as it was used before in menu.html
+    const img = 'IM/PASTAS/RAVIOLES.png'; // Assuming pasta.png as it was used before in menu.html
     const category = 'Pasta';
 
     const cardBtn = document.querySelector('button[onclick="openRaviolesModal()"]');
